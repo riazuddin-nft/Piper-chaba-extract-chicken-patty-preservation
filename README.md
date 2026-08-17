@@ -1,4 +1,5 @@
 # Effect of Piper chaba (Chui Jhal) extract on physicochemical properties, oxidative stability and microbial load of chicken patties during refrigerated storage
+[![DOI](https://zenodo.org/badge/1337043427.svg)](https://doi.org/10.5281/zenodo.21981373)
 This repository contains the R analysis pipeline and generated figures/tables supporting the manuscript investigating the effects of *Piper chaba* extract (PCE) on the physicochemical, oxidative, and microbial quality of raw chicken patties during refrigerated storage (Day 1, 5, and 10).
 
 ## Overview
