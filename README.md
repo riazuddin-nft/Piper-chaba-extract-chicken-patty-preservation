@@ -1,4 +1,4 @@
-# Effect of Piper chaba (Chui Jhal) extract on physicochemical properties, oxidative stability and microbial load of chicken patties during refrigerated storage
+# Effect of Piper chaba (Chui Jhal) extract on physicochemical properties, oxidative stability, and microbial load of chicken patties during refrigerated storage
 [![DOI](https://zenodo.org/badge/1337043427.svg)](https://doi.org/10.5281/zenodo.21981373)
 This repository contains the R analysis pipeline and generated figures/tables supporting the manuscript investigating the effects of *Piper chaba* extract (PCE) on the physicochemical, oxidative, and microbial quality of raw chicken patties during refrigerated storage (Day 1, 5, and 10).
 
@@ -11,7 +11,7 @@ Five treatments were evaluated:
 - **T3** — 0.5% *Piper chaba* extract (PCE)
 - **T4** — 1% *Piper chaba* extract (PCE)
 
-Eleven quality parameters were assessed across storage: pH, cooking loss, TBARS, DPPH radical scavenging activity, heme iron content, CIE color values (L*, a*, b*), chroma, hue angle, and total viable count (TVC).
+Eleven quality parameters were assessed during storage: pH, cooking loss, TBARS, DPPH radical-scavenging activity, heme iron content, CIE colour values (L*, a*, b*), chroma, hue angle, and total viable count (TVC).
 
 ## Repository Structure
 
@@ -27,14 +27,14 @@ piper-chaba-chicken-patties/
 │   ├── Colour_value_r_code.R        # L*, a*, b*, chroma, hue angle
 │   ├── TVC_r_code.R
 │   ├── PCA_r_code.R
-├── Figures/
-│   └── Piper_chaba_analysis/        # All generated figures and plots
-├── Tables/                          # Summary statistical tables (if exported separately)
+├── Figures
+│   └── Piper_chaba_analysis
+├── Tables                          
 └── LICENSE
 ```
 ## Analysis Pipeline
 
-Each quality parameter was analyzed in its own script using a consistent statistical workflow:
+Each quality parameter was analysed in its own script using a consistent statistical workflow:
 
 1. **Two-way ANOVA** (`aov()`) — Treatment × Day, fully factorial design (fresh patties sampled at each storage day; not repeated measures)
 2. **Assumption checks** — Shapiro-Wilk test for normality, Levene's test for homogeneity of variance
@@ -44,7 +44,7 @@ Applied per parameter: `pH_r_code.R`, `Cooking_loss_r_code.R`, `TBARS_r_code.R`,
 
 Multivariate analysis (`PCA_r_code.R`):
 
-4. **Principal Component Analysis (PCA)** — base R `prcomp()`, mean-centered and unit-variance scaled; visualized with `ggplot2`, `patchwork`, `ggrepel`, and the NPG palette from `ggsci`
+4. **Principal Component Analysis (PCA)** — base R `prcomp()`, mean-centred and unit-variance scaled; visualised with `ggplot2`, `patchwork`, `ggrepel`, and the NPG palette from `ggsci`
 5. **PERMANOVA** — `vegan::adonis2()` with Euclidean distance and 999 permutations; pairwise storage-day comparisons via `pairwiseAdonis` with Benjamini–Hochberg correction
 
 ## Dependencies
