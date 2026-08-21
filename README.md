@@ -1,9 +1,9 @@
 # Effect of Piper chaba (Chui Jhal) extract on physicochemical properties, oxidative stability, and microbial load of chicken patties during refrigerated storage
+
 [![DOI](https://zenodo.org/badge/1337043427.svg)](https://doi.org/10.5281/zenodo.21981373)
 This repository contains the R analysis pipeline and generated figures/tables supporting the manuscript investigating the effects of *Piper chaba* extract (PCE) on the physicochemical, oxidative, and microbial quality of raw chicken patties during refrigerated storage (Day 1, 5, and 10).
 
 ## Overview
-
 Five treatments were evaluated:
 - **T0** — Control (no additive)
 - **T1** — 0.02% BHT (synthetic antioxidant)
@@ -15,8 +15,7 @@ Eleven quality parameters were assessed during storage: pH, cooking loss, TBARS,
 
 ## Repository Structure
 
-```
-piper-chaba-chicken-patties/
+piper-chaba-chicken-patties
 ├── README.md
 ├── Scripts/
 │   ├── pH_r_code.R
@@ -31,7 +30,7 @@ piper-chaba-chicken-patties/
 │   └── Piper_chaba_analysis
 ├── Tables                          
 └── LICENSE
-```
+
 ## Analysis Pipeline
 
 Each quality parameter was analysed in its own script using a consistent statistical workflow:
@@ -49,15 +48,14 @@ Multivariate analysis (`PCA_r_code.R`):
 
 ## Dependencies
 
-```r
+r
 install.packages(c(
-  "tidyverse", "emmeans", "multcomp", "vegan","readxl", "ggsci", "psych", "FactoMineR","car",
-  "patchwork", "ggrepel", "ggsci","ggplot2", "extrafont", "ggbiplot", "factoextra"
+  "tidyverse", "emmeans", "multcomp", "vegan", "readxl", "ggsci", "psych", "FactoMineR","car",
+  "patchwork", "ggrepel", "ggsci", "ggplot2", "extrafont", "ggbiplot", "factoextra"
 ))
 
 # pairwiseAdonis (GitHub)
 # devtools::install_github("pmartinezarbizu/pairwiseAdonis")
-```
 
 #R version and package versions used:
 R version 4.6.1 (2026-06-24 ucrt)
